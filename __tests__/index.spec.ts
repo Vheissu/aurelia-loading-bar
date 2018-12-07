@@ -5,6 +5,9 @@ describe('Index', () => {
 
     beforeEach(() => {
         sut = configure({
+            container: {
+                registerInstance: jest.fn(),
+            },
             globalResources: () => [],
         } as any);
     });

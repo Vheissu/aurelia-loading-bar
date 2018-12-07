@@ -1,0 +1,52 @@
+.au-loading-bar {
+    pointer-events: none;
+    animation-duration: 320ms;
+    animation-timing-function: linear;
+}
+
+.au-loading-bar.au-enter-active {
+    animation-name: fadeIn;
+}
+
+.au-loading-bar.au-leave-active {
+    animation-name: fadeOut;
+}
+
+.au-loading-bar .bar {
+    background: linear-gradient(to right, #e5405e 0%, #ffdb3a 25%, #3fffa2 50%, #3fffa2 50%, #1a9be0 73%, #ba68ed 100%);
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+}
+
+.au-loading-bar .peg {
+    height: 4px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
